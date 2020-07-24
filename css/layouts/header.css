@@ -1,0 +1,149 @@
+.main-header {
+  background: #000;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-navbar {
+  background: linear-gradient(-90deg, #000 -2.82%, #A80A0A 99.1%);
+  border-radius: 38px;
+  padding: 0 8px;
+  flex-grow: 1;
+}
+
+.sidebar-btn {
+  align-self: center;
+  transition: all .3s ease-in-out;
+  margin: 0 24px 0 28px;
+}
+
+.sidebar-btn.active {
+  transform: rotate(45deg);
+}
+
+.brand {
+  height: 64px;
+  margin: 8px 0;
+}
+
+.score {
+  color: #fff;
+  font: 2rem/20px 'HelveticaNeue-Bold';
+  margin: 0 40px;
+}
+
+.navigation-items > li:not(:last-child) {
+  border-right: 1px solid #DEE2EC;
+}
+
+.bell-btn {
+  margin: 0 17px 0 29px;
+}
+
+.bell-btn-doth {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background: #4981FD;
+  padding: 2px;
+}
+
+.bell-btn-doth::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: #DEE2EC;
+}
+
+.dots-btn {
+  margin: 0 38px 0 40px;
+}
+
+.user-btn {
+  color: #fff;
+  margin-left: 54px;
+}
+
+.user-btn > .user-name {
+  font-size: 0.875rem
+}
+
+.user-btn > .user-iamge {
+  margin: 0 10px;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%
+}
+
+@media all and (max-width: 991px) {
+  .brand {
+    height: 50px;
+  }
+
+  .score {
+    font-size: 1.5rem;
+    margin: 20px;
+  }
+
+  .bell-btn {
+    margin: 0 10px 0 22px;
+  }
+
+  .dots-btn {
+    margin: 0 31px 0 33px;
+  }
+
+  .user-btn {
+    margin-left: 20px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .brand {
+    width: 33px;
+    height: 30px;
+    overflow: hidden;
+  }
+
+  .score {
+    font-size: 1.2rem;
+    margin: 10px;
+  }
+
+  .sidebar-btn {
+    margin: 0 15px 0 20px;
+  }
+
+  .sidebar-btn > svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .bell-btn > svg,
+  .dots-btn > svg {
+    height: 20px;
+    width: auto;
+  }
+
+  .user-btn > .user-iamge {
+    margin-left: 0;
+    width: 30px;
+    height: 30px;
+  }
+
+  .dots-btn {
+    margin: 0 15px 0 20px;
+  }
+
+  .bell-btn {
+    margin: 0 4px 0 9px;
+  }
+
+  .user-name {
+    display: none;
+  }
+}

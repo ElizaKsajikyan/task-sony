@@ -1,0 +1,17 @@
+.input-group{
+  color: #6A7284;
+  flex-grow: 1;
+  margin-right: 14px;
+}
+.input-group > .input {
+  border-radius: 24px;
+  border: 2px solid #DEE2EC;
+  padding: 9px 22px;
+  font: 1rem 'Roboto-Medium';
+}
+
+.input-group > .label {
+  font-size:0.75rem;
+  font-weight: 500;
+  margin:0 15px 6px;
+}

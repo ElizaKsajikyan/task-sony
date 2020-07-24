@@ -1,0 +1,170 @@
+.tab-container {
+  margin-top: 11px
+}
+
+.tab-container, .accordion-btn {
+  transition: all .3s ease-in-out;
+}
+
+.tab-container > .container {
+  padding: 0 15px;
+}
+
+.tub-item {
+  display: none;
+}
+
+.tub-item.active {
+  display: block;
+}
+
+.tab-header > li.toggle {
+  max-width: calc(100% / 5);
+}
+
+.tab-header-btn {
+  padding: 10px;
+  font: 1rem 'Inter-Bold';
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.tab-header > li:not(:first-child) > .tab-header-btn {
+  margin-left: 10px;
+}
+
+.tab-header-btn.active {
+  margin-bottom: 0;
+  height: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.tab-header-btn > .icon {
+  height: 30px;
+  margin-right: 10px;
+}
+
+.tab-header-btn, .tab-main-container {
+  background: #fff;
+  border-radius: 10px;
+}
+
+/*main container*/
+.tab-main-container {
+  padding: 19px 15px;
+  min-height: 55vh;
+}
+
+.tub-item-header {
+  box-shadow: 0 3px 4px -2px rgba(0, 0, 0, 0.15);
+  padding-bottom: 22px;
+  flex-wrap: wrap;
+}
+
+.tub-item-header > .title {
+  font: 1.2rem 'Inter-Bold';
+  color: #103060;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.tab-sub-header {
+  padding: 20px 0;
+}
+
+.list-chart-toggle {
+  width: 41px;
+  height: 41px;
+  cursor: pointer;
+  margin-right: 25px;
+}
+
+.list-chart-toggle > .icon {
+  width: inherit;
+  height: inherit;
+  fill: #A9A9A9;
+}
+
+.list-chart-toggle > input:checked + .icon {
+  fill: #1890FF;
+}
+
+/*filter block*/
+.filter-block {
+  background: #F4F4F4;
+  padding: 11px 30px 11px 16px;
+  margin: 0 -16px;
+  align-items: flex-end;
+}
+
+/*accordion*/
+
+.accordion {
+  border-radius: 10px;
+  padding: 32px 48px 32px 38px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  color: #103060;
+  margin-top: 33px;
+}
+
+.accordion-number {
+  font: 1rem 'Inter-Bold';
+}
+
+.accordion-name {
+  font: 1.2rem 'Inter-Regular';
+  margin: 0 15px 0 20px;
+}
+
+.accordion-btn {
+  transform: rotate(180deg);
+}
+
+.accordion-btn.open {
+  transform: rotate(0deg);
+}
+
+/*media*/
+
+@media all and (max-width: 991px) {
+  .tab-header-btn > .icon {
+    margin-right: 0;
+  }
+
+  .tab-header-btn > span {
+    display: none;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .accordion {
+    padding: 20px 30px 20px 30px;
+    margin-top: 20px;
+  }
+  .list-chart-toggle {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  #filter{
+    margin:0 0 0 10px;
+  }
+  #accordeon-toggle>svg{
+    width: 30px;
+    height: 30px;
+  }
+  .tub-item-header > .title{
+    font-size: 1rem;
+  }
+}
+
+@media all and (max-width: 567px) {
+  .accordion-name {
+    font-size: 1rem;
+    margin: 0 10px 0;
+  }
+
+  .accordion-number {
+    font-size: 0.8rem;
+  }
+}

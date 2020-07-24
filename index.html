@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="container">
+    <!--general header start-->
+    <header class="main-header sticky d-flex w-100">
+        <button type="button" class="sidebar-btn btn">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.2632 10.6039H10.4707V17.3963H17.2632V10.6039Z" fill="white"/>
+                <path d="M7.07371 0.415161L0.28125 0.415161L0.28125 7.20762H7.07371V0.415161Z" fill="white"/>
+                <path d="M17.2632 20.7926H10.4707V27.5851H17.2632V20.7926Z" fill="white"/>
+                <path d="M7.07371 10.6039H0.28125L0.28125 17.3963H7.07371V10.6039Z" fill="white"/>
+                <path d="M7.07371 20.7926H0.28125L0.28125 27.5851H7.07371V20.7926Z" fill="white"/>
+                <path d="M27.4507 0.415161L20.6582 0.415161V7.20762H27.4507V0.415161Z" fill="white"/>
+                <path d="M17.2632 0.415161L10.4707 0.415161V7.20762H17.2632V0.415161Z" fill="white"/>
+                <path d="M27.4507 10.6039H20.6582V17.3963H27.4507V10.6039Z" fill="white"/>
+                <path d="M27.4507 20.7926H20.6582V27.5851H27.4507V20.7926Z" fill="white"/>
+            </svg>
+        </button>
+        <nav class="header-navbar d-flex justify-between">
+            <a href="#" class="brand d-block">
+                <img src="images/logo.png" class="h-100" alt="">
+            </a>
+            <ul class="d-flex navigation-items h-100">
+                <li class="navigation-item h-100 align-center d-flex"><a href="#" class="score text-uppercase">Score</a>
+                </li>
+                <li class="align-center d-flex">
+                    <button type="button" class="btn bell-btn d-flex">
+                        <svg width="27" height="33" viewBox="0 0 27 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.7524 32.3349C14.6059 32.3323 15.4237 31.9921 16.0272 31.3886C16.6307 30.7851 16.9709 29.9673 16.9735 29.1138H10.5299C10.5326 29.9675 10.873 30.7855 11.4768 31.3891C12.0806 31.9926 12.8987 32.3326 13.7524 32.3349V32.3349ZM23.4171 22.6702V14.6161C23.4171 9.67019 20.7914 5.53104 16.1683 4.43592V3.33938C16.1683 2.69848 15.9137 2.08382 15.4605 1.63064C15.0073 1.17745 14.3926 0.922852 13.7517 0.922852C13.1108 0.922852 12.4962 1.17745 12.043 1.63064C11.5898 2.08382 11.3352 2.69848 11.3352 3.33938V4.4345C6.72773 5.52961 4.08632 9.65306 4.08632 14.6146V22.6688L0.865234 25.8913V27.5018H26.6382V25.8913L23.4171 22.6702ZM20.1961 24.2807H7.30884V14.6161C7.30884 10.6182 9.73608 7.36717 13.7524 7.36717C17.7688 7.36717 20.1961 10.6211 20.1961 14.6161V24.2807Z"
+                                  fill="#DEE2EC"/>
+                        </svg>
+                        <span class="bell-btn-doth"></span>
+                    </button>
+                </li>
+                <li class="align-center d-flex">
+                    <button type="button" class="btn dots-btn">
+                        <svg width="9" height="32" viewBox="0 0 9 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.23603 4.35242C8.21303 3.60436 7.97018 2.87964 7.53781 2.26876C7.10543 1.65788 6.50269 1.1879 5.80483 0.917489C5.10698 0.647082 4.34493 0.588233 3.61383 0.748289C2.88273 0.908346 2.21497 1.28022 1.69394 1.81747C1.1729 2.35472 0.82166 3.03356 0.684077 3.76922C0.546494 4.50488 0.628663 5.26477 0.920324 5.95401C1.21198 6.64326 1.70021 7.23132 2.32405 7.64477C2.9479 8.05823 3.67971 8.27876 4.42812 8.27884C5.45276 8.26005 6.42835 7.83659 7.14181 7.10092C7.85528 6.36525 8.24865 5.37715 8.23603 4.35242ZM8.23603 27.9109C8.21303 27.1629 7.97018 26.4381 7.53781 25.8273C7.10543 25.2164 6.50269 24.7464 5.80483 24.476C5.10698 24.2056 4.34493 24.1467 3.61383 24.3068C2.88273 24.4669 2.21497 24.8387 1.69394 25.376C1.1729 25.9132 0.82166 26.5921 0.684077 27.3277C0.546494 28.0634 0.628663 28.8233 0.920324 29.5125C1.21198 30.2018 1.70021 30.7898 2.32405 31.2033C2.9479 31.6167 3.67971 31.8373 4.42812 31.8373C5.45276 31.8186 6.42835 31.3951 7.14181 30.6594C7.85528 29.9238 8.24865 28.9357 8.23603 27.9109ZM8.23603 16.1317C8.21303 15.3836 7.97018 14.6589 7.53781 14.048C7.10543 13.4371 6.50269 12.9671 5.80483 12.6967C5.10698 12.4263 4.34493 12.3675 3.61383 12.5275C2.88273 12.6876 2.21497 13.0595 1.69394 13.5967C1.1729 14.134 0.82166 14.8128 0.684077 15.5485C0.546494 16.2841 0.628663 17.044 0.920324 17.7333C1.21198 18.4225 1.70021 19.0106 2.32405 19.424C2.9479 19.8375 3.67971 20.058 4.42812 20.0581C5.45276 20.0393 6.42835 19.6158 7.14181 18.8802C7.85528 18.1445 8.24865 17.1564 8.23603 16.1317Z"
+                                  fill="#DEE2EC"/>
+                        </svg>
+                    </button>
+                </li>
+                <li class="align-center d-flex">
+                    <button type="button" class="btn user-btn align-center d-flex">
+                        <span class="user-name">John Doe</span>
+                        <img src="images/user.png" class="user-iamge hidden object-fite" alt=""/>
+                        <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.3197 0.106445L7.07394 5.34073L1.82823 0.106445L0.216797 1.71787L7.07394 8.57502L13.9311 1.71787L12.3197 0.106445Z"
+                                  fill="white"/>
+                        </svg>
+
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!--general header end-->
+
+    <!--sub-header start -->
+    <header class="sub-header sticky align-start w-100 d-flex" id="sub-header">
+        <div class="relative client-rsize">
+            <div class="clients-btn-container d-flex align-center relative">
+                <div class="d-flex justify-between  clients-container-open hidden relative">
+                    <a class="excel-btn d-flex align-center justify-center" href="#" download>
+                        <img src="images/icons/excel.svg" alt=""/>
+                    </a>
+                    <div class="d-flex align-center">
+                        <button class="search-btn d-flex align-center justify-center">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.78058 0.799133C3.68629 0.799133 0.367188 4.11824 0.367188 8.21253C0.367188 12.3068 3.68629 15.6259 7.78058 15.6259C11.8749 15.6259 15.194 12.3068 15.194 8.21253C15.1904 4.11969 11.8734 0.802679 7.78058 0.799133ZM7.78058 13.0474C5.11039 13.0474 2.94576 10.8827 2.94576 8.21253C2.94576 5.54234 5.11039 3.37771 7.78058 3.37771C10.4508 3.37771 12.6154 5.54234 12.6154 8.21253C12.6119 10.8813 10.4493 13.0438 7.78058 13.0474Z"
+                                      fill="#6A7284"/>
+                                <path d="M18.0347 16.6506L15.4561 14.0721C14.9523 13.5683 14.1355 13.5683 13.6317 14.0721C13.128 14.5758 13.128 15.3926 13.6317 15.8964L16.2103 18.475C16.7141 18.9788 17.5309 18.9788 18.0347 18.475C18.5384 17.9712 18.5384 17.1544 18.0347 16.6506Z"
+                                      fill="#6A7284"/>
+                            </svg>
+                        </button>
+                        <button class="filter-btn">Filter</button>
+                        <button class="resize-btn d-flex align-center justify-center">
+                            <svg width="17" height="18" viewBox="0 0 17 18" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.704059 12.2317C1.01854 12.2317 1.27335 12.4866 1.27335 12.801L1.27335 15.2283L4.93998 11.5625C5.05118 11.4513 5.19684 11.3958 5.34251 11.3958C5.48825 11.3958 5.63399 11.4513 5.74511 11.5625C5.96744 11.7849 5.96744 12.1453 5.74504 12.3676L2.07826 16.0335H4.5061C4.8205 16.0335 5.07539 16.2884 5.07539 16.6028C5.07539 16.9172 4.82058 17.1721 4.5061 17.1721H0.704059C0.389581 17.1721 0.134766 16.9172 0.134766 16.6028L0.134766 12.8009C0.134766 12.4866 0.389581 12.2317 0.704059 12.2317Z"
+                                      fill="#595959"/>
+                                <path d="M15.9125 5.76669C15.598 5.76669 15.3432 5.5118 15.3432 5.19739V2.77L11.5637 6.5495C11.3413 6.77183 10.9809 6.77183 10.7585 6.5495C10.5362 6.32717 10.5362 5.9667 10.7585 5.74445L14.538 1.96502L12.1107 1.96502C11.7962 1.96502 11.5414 1.71013 11.5414 1.39573C11.5414 1.08133 11.7962 0.826438 12.1107 0.826438L15.9125 0.826438C16.227 0.826438 16.4818 1.08133 16.4818 1.39573V5.19739C16.4818 5.5118 16.2269 5.76669 15.9125 5.76669Z"
+                                      fill="#595959"/>
+                                <path d="M5.05247 6.54925L1.27335 2.76983L1.27335 5.19714C1.27335 5.51154 1.01854 5.76643 0.704059 5.76643C0.389581 5.76643 0.134766 5.51154 0.134766 5.19714L0.134766 1.39532C0.134766 1.08092 0.389581 0.826032 0.704059 0.826032L4.50572 0.826032C4.82012 0.826032 5.07501 1.08092 5.07501 1.39532C5.07501 1.70973 4.8202 1.96462 4.50572 1.96462L2.07841 1.96462L5.8576 5.74419C6.07993 5.96652 6.07993 6.327 5.85753 6.54932C5.63535 6.77158 5.27487 6.77158 5.05247 6.54925Z"
+                                      fill="#595959"/>
+                                <path d="M15.9123 17.1722H12.1105C11.796 17.1722 11.5412 16.9173 11.5412 16.6029C11.5412 16.2885 11.796 16.0337 12.1105 16.0337H14.5379L10.8718 12.3673C10.6495 12.145 10.6495 11.7845 10.8719 11.5622C10.983 11.4511 11.1288 11.3955 11.2744 11.3955C11.4201 11.3955 11.5658 11.4511 11.677 11.5623L15.3431 15.2286V12.8011C15.3431 12.4867 15.5979 12.2318 15.9124 12.2318C16.2269 12.2318 16.4817 12.4867 16.4817 12.8011V16.6029C16.4816 16.9174 16.2267 17.1722 15.9123 17.1722Z"
+                                      fill="#595959"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <button type="button" class="btn clients-btn" id="clients-btn">
+                    <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.34255 17.8639C3.03348 15.0929 5.1042 12.9685 7.7144 12.1438C6.9398 10.9798 6.48716 9.58372 6.48716 8.08363C6.48716 4.03099 9.78426 0.733887 13.8369 0.733887C17.8895 0.733887 21.1866 4.03099 21.1866 8.08375C21.1866 9.58384 20.734 10.9798 19.9594 12.144C22.5696 12.9686 24.6403 15.093 25.3313 17.864L26.773 23.6459C27.0268 24.6637 26.8019 25.7214 26.1562 26.548C25.5104 27.3746 24.5385 27.8484 23.4895 27.8484H4.18413C3.13522 27.8484 2.16337 27.3744 1.51751 26.5479C0.871647 25.7214 0.646912 24.6635 0.900713 23.6458L2.34255 17.8639ZM13.8369 4.39801C11.8047 4.39801 10.1513 6.05138 10.1513 8.08375C10.1513 10.116 11.8047 11.7694 13.8369 11.7694C15.8691 11.7694 17.5225 10.116 17.5225 8.08375C17.5225 6.05138 15.8691 4.39801 13.8369 4.39801ZM23.1309 24.1843L21.7761 18.7504C21.2891 16.7974 19.5433 15.4335 17.5307 15.4335H10.1432C8.13052 15.4335 6.38481 16.7974 5.89784 18.7504L4.54285 24.1843H23.1309Z"
+                              fill="black"/>
+                    </svg>
+                    <span class="d-block">Clients</span>
+                </button>
+            </div>
+            <div class="absolute info-table hidden d-flex flex-column">
+                <div class="d-grid info-table-item info-table-header">
+                    <h3 class="title">Clients</h3>
+                    <h3 class="title">Payee</h3>
+                    <h3 class="title">Current Balance</h3>
+                </div>
+                <div class="info-table-item d-grid relative">
+                    <div class="item">
+                        <p class="title text-ellipsis">Kelly,Henry(State Of)</p>
+                        <p class="number">98113</p>
+                    </div>
+                    <div class="item">
+                        <p class="title text-ellipsis">Kelly,Henry..</p>
+                        <p class="number">20525</p>
+                    </div>
+                    <div class="item">
+                        <p>0.12</p>
+                    </div>
+                </div>
+                <div class="info-table-item d-grid active relative">
+                    <div class="item">
+                        <p class="title text-ellipsis">Kelly,Henry(State Of)</p>
+                        <p class="number">98113</p>
+                    </div>
+                    <div class="item">
+                        <p class="title text-ellipsis">Kelly,Henry..</p>
+                        <p class="number">20525</p>
+                    </div>
+                    <div class="item">
+                        <p>0.12</p>
+                    </div>
+                </div>
+                <div class="info-table-item d-grid relative">
+                    <div class="item">
+                        <p class="title text-ellipsis">Kelly,Henry(State Of)</p>
+                        <p class="number">98113</p>
+                    </div>
+                    <div class="item">
+                        <p class="title text-ellipsis">Kelly,Henry..</p>
+                        <p class="number">20525</p>
+                    </div>
+                    <div class="item">
+                        <p>0.12</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="user-information">
+            <div class="info-text  d-flex align-center">
+                <h1 class="info-text-user">Kelly,Tom <span class="text-red">No.115060</span></h1>
+                <span>Payee: Kelly,Tom</span>
+                <span class="text-red">No.20525</span></div>
+            <div class="info-text">
+                <span>Statement Frequency:</span><span class="text-red">Semi-Annual</span>
+                <span>Due Days:</span>
+                <span class="text-red">90</span>
+                <span>Currency:</span>
+                <span class="text-red">USD</span></div>
+        </div>
+    </header>
+    <!--sub-end start -->
+
+    <!--aside menu start-->
+    <aside class="aside-menu fixed">
+        <ul>
+            <li>
+                <a href="#" class="aside-menu-item text-center d-block active">
+                    <svg class="aside-menu-item-icon" width="32" height="27" viewBox="0 0 32 27" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.039 26.1991V16.9699H19.1917V26.1991H26.8827V13.8936H31.4973L16.1153 0.0498047L0.733398 13.8936H5.34798V26.1991H13.039Z"/>
+                    </svg>
+                    <span class="d-block text-ellipsis">
+                        Home
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="aside-menu-item text-center d-block">
+                    <svg class="aside-menu-item-icon" width="33" height="33" viewBox="0 0 33 33" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.3982 0.546387C7.70945 0.546387 0.666016 7.59006 0.666016 16.2786C0.666016 24.9677 7.70945 32.0108 16.3982 32.0108C25.087 32.0108 32.1305 24.9677 32.1305 16.2786C32.1305 7.59006 25.087 0.546387 16.3982 0.546387ZM16.3982 8.4125C17.4844 8.4125 18.3648 9.29302 18.3648 10.379C18.3648 11.4655 17.4844 12.3456 16.3982 12.3456C15.3121 12.3456 14.4317 11.4655 14.4317 10.379C14.4317 9.29302 15.3121 8.4125 16.3982 8.4125ZM19.348 24.1447H13.4485C12.9054 24.1447 12.4652 23.705 12.4652 23.1615C12.4652 22.6185 12.9054 22.1782 13.4485 22.1782H14.4317V16.2786H13.4485C12.9054 16.2786 12.4652 15.8389 12.4652 15.2954C12.4652 14.7523 12.9054 14.3121 13.4485 14.3121H17.3815C17.9245 14.3121 18.3648 14.7523 18.3648 15.2954V22.1782H19.348C19.891 22.1782 20.3313 22.6185 20.3313 23.1615C20.3313 23.705 19.891 24.1447 19.348 24.1447Z"/>
+                    </svg>
+                    <span class="d-block text-ellipsis">
+                        Info
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="aside-menu-item text-center d-block">
+                    <svg class="aside-menu-item-icon" width="38" height="37" viewBox="0 0 38 37" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M27.7095 0.200795C29.1297 0.200739 30.4649 0.753775 31.4692 1.75801C32.4734 2.76224 33.0265 4.09748 33.0265 5.51777V23.439C33.0265 26.3708 30.6412 28.756 27.7095 28.756H9.78816C6.85651 28.756 4.4713 26.3708 4.47119 23.439L4.4713 5.5176C4.47119 4.09748 5.02423 2.76229 6.02846 1.75806C7.03269 0.753831 8.36787 0.200739 9.78811 0.200684L27.7095 0.200795ZM10.6843 23.3795H26.8135C27.2755 23.3795 27.6501 23.005 27.6502 22.543C27.6502 22.0809 27.2755 21.7064 26.8136 21.7064H10.6843C10.2223 21.7064 9.84767 22.0809 9.84767 22.543C9.84767 23.005 10.2223 23.3795 10.6843 23.3795ZM23.7755 13.5749L19.3401 18.0104C19.1832 18.1673 18.9704 18.2555 18.7486 18.2555C18.5266 18.2555 18.3139 18.1674 18.157 18.0104L13.7217 13.5752C13.3949 13.2485 13.3949 12.7188 13.7216 12.3921C14.0483 12.0654 14.5779 12.0653 14.9048 12.3921L17.9121 15.3994L17.912 6.47488C17.912 6.01286 18.2865 5.6383 18.7486 5.6383C19.2106 5.6383 19.5851 6.01286 19.5851 6.47488L19.5853 15.3991L22.5924 12.3918C22.7558 12.2284 22.9699 12.1467 23.1839 12.1467C23.3981 12.1467 23.6122 12.2284 23.7755 12.3918C24.1022 12.7184 24.1022 13.2481 23.7755 13.5749Z"/>
+                        </g>
+                        <defs>
+                            <filter id="filter0_d" x="0.471191" y="0.200684" width="36.5553" height="36.5553"
+                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                                <feOffset dy="4"/>
+                                <feGaussianBlur stdDeviation="2"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                            </filter>
+                        </defs>
+                    </svg>
+                    <span class="d-block text-ellipsis">
+                        Downloads
+                    </span>
+                </a>
+            </li>
+        </ul>
+
+    </aside>
+    <!--aside menu end-->
+
+    <!--main content start-->
+    <section class="tab-container">
+        <div class="container">
+            <ul class="tab-header d-flex">
+                <li><a class="tab-header-btn d-flex align-center active" href="#dashboard">
+                    <img class="icon" src="images/icons/dashboard.svg" alt="">
+                    <span class="text-ellipsis">Dashboard</span></a></li>
+                <li><a class="tab-header-btn d-flex align-center" href="#earnings-summary">
+                    <img class="icon" src="images/icons/earnings-summary.svg" alt=""/>
+                    <span class="text-ellipsis">Earnings Summary</span>
+                </a></li>
+                <li><a class="tab-header-btn d-flex align-center" href="#earnings-details">
+                    <img class="icon" src="images/icons/earnings-details.svg" alt=""/>
+                    <span class="text-ellipsis">
+                    Earnings Details
+                </span>
+                </a></li>
+                <li><a class="tab-header-btn d-flex align-center" href="#song-details">
+                    <img class="icon" src="images/icons/song-details.svg" alt=""/>
+                    <span class="text-ellipsis">Production / Song Details</span>
+                </a></li>
+                <li>
+                    <a class="tab-header-btn d-flex align-center" href="#analytics">
+                        <img class="icon" src="images/icons/analytics.svg" alt="">
+                        <span class="text-ellipsis">Analytics</span>
+                    </a>
+                </li>
+            </ul>
+            <section class="tab-main-container">
+                <div id="dashboard" class="tub-item active">
+
+                </div>
+                <div id="earnings-summary" class="tub-item">Earnings Summary</div>
+                <div id="earnings-details" class="tub-item">Earnings Details</div>
+                <div id="song-details" class="tub-item">
+                    <header class="tub-item-header d-flex align-center justify-between">
+                        <h2 class="title text-ellipsis">Inerested Parties View</h2>
+                        <ul class="d-flex radio-group">
+                            <li class="d-flex align-center">
+                                <div class="radio-container relative">
+                                    <input type="radio" name="song" id="song-alerts" class="absolute w-100 h-100">
+                                    <div class="radio d-flex align-center justify-center"></div>
+                                </div>
+                                <label for="song-alerts" class="label text-ellipsis">
+                                    Song Alerts
+                                </label>
+                            </li>
+                            <li class="d-flex align-center">
+                                <div class="radio-container relative">
+                                    <input type="radio" name="song" id="song-list-view" class="absolute w-100 h-100"
+                                           checked>
+                                    <div class="radio d-flex align-center justify-center"></div>
+                                </div>
+                                <label for="song-list-view" class="label text-ellipsis">
+                                    Song List View
+                                </label>
+                            </li>
+                            <li class="d-flex align-center">
+                                <div class="radio-container relative">
+                                    <input type="radio" name="song" id="registrations-view"
+                                           class="absolute w-100 h-100">
+                                    <div class="radio d-flex align-center justify-center"></div>
+                                </div>
+                                <label for="registrations-view" class="label text-ellipsis">Registrations View</label>
+                            </li>
+                        </ul>
+                    </header>
+                    <div class="d-flex align-center justify-between tab-sub-header">
+                        <ul class="d-flex">
+                            <li class="list-chart-toggle">
+                                <label class="list-chart-toggle">
+                                    <input type="radio" class="d-none" name="list-chart" checked>
+                                    <svg class="icon" viewBox="0 0 41 41" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M36.1401 0.387695H4.71149C2.34456 0.387695 0.425781 2.30647 0.425781 4.67341V36.102C0.425781 38.4689 2.34456 40.3877 4.71149 40.3877H36.1401C38.507 40.3877 40.4258 38.4689 40.4258 36.102V4.67341C40.4258 2.30647 38.507 0.387695 36.1401 0.387695ZM13.2829 31.8163H8.9972C8.2082 31.8163 7.56861 31.1767 7.56861 30.3877C7.56861 29.5987 8.2082 28.9591 8.9972 28.9591H13.2829C14.0719 28.9591 14.7115 29.5987 14.7115 30.3877C14.7115 31.1767 14.0719 31.8163 13.2829 31.8163ZM13.2829 21.8163H8.9972C8.2082 21.8163 7.56861 21.1767 7.56861 20.3877C7.56861 19.5986 8.2082 18.9591 8.9972 18.9591H13.2829C14.0719 18.9591 14.7115 19.5986 14.7115 20.3877C14.7115 21.1767 14.0719 21.8163 13.2829 21.8163ZM13.2829 11.8162H8.9972C8.2082 11.8162 7.56861 11.1766 7.56861 10.3876C7.56861 9.59863 8.2082 8.95912 8.9972 8.95912H13.2829C14.0719 8.95912 14.7115 9.59871 14.7115 10.3877C14.7115 11.1767 14.0719 11.8162 13.2829 11.8162ZM31.8544 31.8163H18.9972C18.2082 31.8163 17.5686 31.1767 17.5686 30.3877C17.5686 29.5987 18.2082 28.9591 18.9972 28.9591H31.8544C32.6434 28.9591 33.283 29.5987 33.283 30.3877C33.283 31.1767 32.6433 31.8163 31.8544 31.8163ZM31.8544 21.8163H18.9972C18.2082 21.8163 17.5686 21.1767 17.5686 20.3877C17.5686 19.5986 18.2082 18.9591 18.9972 18.9591H31.8544C32.6434 18.9591 33.283 19.5986 33.283 20.3877C33.283 21.1767 32.6433 21.8163 31.8544 21.8163ZM31.8544 11.8162H18.9972C18.2082 11.8162 17.5686 11.1766 17.5686 10.3876C17.5686 9.59863 18.2082 8.95903 18.9972 8.95903H31.8544C32.6434 8.95903 33.283 9.59863 33.283 10.3876C33.283 11.1766 32.6433 11.8162 31.8544 11.8162Z"/>
+                                    </svg>
+                                </label></li>
+                            <li>
+                                <label class="list-chart-toggle">
+                                    <input type="radio" class="d-none" name="list-chart">
+                                    <svg class="icon" viewBox="0 0 41 41" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M36.1688 0.387695H5.05776C2.60214 0.387695 0.613281 2.37655 0.613281 4.83217V35.9433C0.613281 38.3988 2.60214 40.3877 5.05776 40.3877H36.1689C38.6244 40.3877 40.6133 38.3988 40.6133 35.9432V4.83217C40.6133 2.37655 38.6244 0.387695 36.1688 0.387695ZM13.9466 31.4988H9.50214V15.9432H13.9466V31.4988ZM22.8355 31.4988H18.391V9.27655H22.8355V31.4988ZM31.7244 31.4988H27.2799V22.61H31.7244V31.4988Z"/>
+                                    </svg>
+                                </label>
+                            </li>
+                        </ul>
+                        <ul class="d-flex">
+                            <li><a class="excel-btn d-flex align-center justify-center" href="#" download>
+                                <img src="images/icons/excel.svg" alt=""/>
+                            </a></li>
+                            <li>
+                                <button type="button" class="btn" id="accordeon-toggle">
+                                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M0.5625 5.30273C0.5625 2.54131 2.80108 0.302734 5.5625 0.302734H35.5625C38.3239 0.302734 40.5625 2.54131 40.5625 5.30273V35.3027C40.5625 38.0642 38.3239 40.3027 35.5625 40.3027H5.5625C2.80108 40.3027 0.5625 38.0642 0.5625 35.3027V5.30273Z"
+                                              fill="#EBEBEB"/>
+                                        <path d="M23.6122 12.9791L15.6498 20.9414L7.6875 12.9791H13.7734L13.7707 8.92335L17.5236 8.92335L17.5263 12.9791L23.6122 12.9791Z"
+                                              fill="#1890FF"/>
+                                        <path d="M27.6669 31.8521L23.914 31.8521V27.7366H17.8281L25.7905 19.7743L33.7528 27.7366L27.6669 27.7366L27.6669 31.8521Z"
+                                              fill="#1890FF"/>
+                                    </svg>
+
+                                </button>
+                            </li>
+                            <li>
+                                <button class="filter-btn" id="filter">Filter</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--song filter block start-->
+                    <form class="filter-block d-none" id="filter-form">
+                        <div class="input-group">
+                            <label for="song" class="d-block label">Song title</label>
+                            <input type="text" id="song" placeholder="Song" class="d-block input w-100"/>
+                        </div>
+                        <div class="input-group">
+                            <label for="writer" class="d-block label">Writer</label>
+                            <input type="text" id="writer" placeholder="Writer" class="d-block input w-100"/>
+                        </div>
+                        <div class="input-group">
+                            <label for="publisher" class="d-block label">Publisher</label>
+                            <input type="text" id="publisher" placeholder="Publisher" class="d-block input w-100"/>
+                        </div>
+                        <button type="submit" class="search-btn d-flex align-center justify-center">
+                            <svg width="26" height="21" viewBox="0 0 26 21" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.715 0.37207C8.07065 0.37207 4.18919 3.69204 3.31338 8.08172L1.84731 6.12767L0.142578 7.40622L3.33895 11.6681C3.54778 11.9472 3.86848 12.0942 4.19238 12.0942C4.414 12.0942 4.63881 12.025 4.83059 11.8811L9.09242 8.68477L7.81387 6.98004L5.35267 8.82648C5.90244 5.25187 8.98907 2.50299 12.715 2.50299C15.3701 2.50299 17.8462 3.9339 19.177 6.23635L21.0213 5.16983C19.3112 2.21105 16.1287 0.37207 12.715 0.37207Z"
+                                      fill="#1890FF"/>
+                                <path d="M22.0702 9.29504C21.7037 8.83583 21.0367 8.76125 20.5786 9.12457L16.5298 12.3209L17.8499 13.9926L20.064 12.2442C19.479 15.7784 16.4105 18.4846 12.7144 18.4846C10.0604 18.4846 7.58424 17.0558 6.25349 14.7544L4.40918 15.822C6.1203 18.7787 9.30176 20.6155 12.7144 20.6155C17.4003 20.6155 21.3041 17.2348 22.1341 12.7865L23.8154 14.8887L25.4797 13.5579L22.0702 9.29504Z"
+                                      fill="#1890FF"/>
+                            </svg>
+                        </button>
+                    </form>
+                    <!--song filter block end-->
+
+
+                    <section class="accordion-container">
+                        <div>
+                            <div class="d-flex justify-between accordion">
+                                <div class="d-flex align-center hidden">
+                                    <p class="accordion-number">1998264</p>
+                                    <h3 class="accordion-name text-ellipsis">Another Tick in the Tempo</h3>
+                                </div>
+
+                                <button class="btn accordion-btn">
+                                    <svg width="22" height="13" viewBox="0 0 22 13" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.6881 12.791L10.9687 4.89858L19.2493 12.791L21.793 10.3612L10.9687 0.0218192L0.144394 10.3612L2.6881 12.791Z"
+                                              fill="#6A7284"/>
+                                    </svg>
+
+                                </button>
+                            </div>
+                            <div class="table-conainer d-none">
+                                <table class="w-100 accordion-table">
+                                    <thead>
+                                    <tr>
+                                        <th colspan="2"><p class="general-title text-ellipsis">Territory Grouping</p>
+                                        </th>
+                                        <th colspan="2"><p class="general-title text-ellipsis">The World</p></th>
+                                        <th colspan="3"><p class="text-center general-title text-ellipsis">Collection
+                                            Percentage</p></th>
+                                    </tr>
+                                    <tr>
+                                        <th><p class="text-ellipsis">CAP</p></th>
+                                        <th colspan="2"><p class="text-ellipsis">Name</p></th>
+                                        <th><p class="text-ellipsis">Controlled %</p></th>
+                                        <th><p class="text-ellipsis">Mechanical</p></th>
+                                        <th><p class="text-ellipsis">Performance</p></th>
+                                        <th><p class="text-ellipsis">Synchronization</p></th>
+                                    </tr>
+                                    </thead>
+                                    <tr>
+                                        <td><p class="text-ellipsis">CA</p></td>
+                                        <td colspan="2"><p class="text-ellipsis">Cynitha Waters</p></td>
+                                        <td><p class="text-ellipsis">100.00</p></td>
+                                        <td><p class="text-ellipsis">0.00</p></td>
+                                        <td><p class="text-ellipsis">50.00</p></td>
+                                        <td><p class="text-ellipsis">0.00</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p class="text-ellipsis">CA</p></td>
+                                        <td colspan="2"><p class="text-ellipsis">Cynitha Waters</p></td>
+                                        <td><p class="text-ellipsis">100.00</p></td>
+                                        <td><p class="text-ellipsis">0.00</p></td>
+                                        <td><p class="text-ellipsis">50.00</p></td>
+                                        <td><p class="text-ellipsis">0.00</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3"><p>Writer Controlled</p></td>
+                                        <td><p>100.00</p></td>
+                                        <td><p>0.00</p></td>
+                                        <td><p>50.00</p></td>
+                                        <td><p>0.00</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3"><p class="text-ellipsis">Publisher Controlled</p></td>
+                                        <td><p class="text-ellipsis">100.00</p></td>
+                                        <td><p class="text-ellipsis">100.00</p></td>
+                                        <td><p class="text-ellipsis">50.00</p></td>
+                                        <td><p class="text-ellipsis">100.00</p></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="d-flex justify-between accordion">
+                                <div class="d-flex align-center hidden">
+                                    <p class="accordion-number">1998264</p>
+                                    <h3 class="accordion-name text-ellipsis">Another Tick in the Tempo</h3>
+                                </div>
+
+                                <button class="btn accordion-btn">
+                                    <svg width="22" height="13" viewBox="0 0 22 13" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.6881 12.791L10.9687 4.89858L19.2493 12.791L21.793 10.3612L10.9687 0.0218192L0.144394 10.3612L2.6881 12.791Z"
+                                              fill="#6A7284"/>
+                                    </svg>
+
+                                </button>
+                            </div>
+                            <div class="table-conainer d-none">
+                                <table class="w-100 accordion-table">
+                                    <thead>
+                                    <tr>
+                                        <th colspan="2"><p class="general-title text-ellipsis">Territory Grouping</p>
+                                        </th>
+                                        <th colspan="2"><p class="general-title text-ellipsis">The World</p></th>
+                                        <th colspan="3"><p class="text-center general-title text-ellipsis">Collection
+                                            Percentage</p></th>
+                                    </tr>
+                                    <tr>
+                                        <th><p class="text-ellipsis">CAP</p></th>
+                                        <th colspan="2"><p class="text-ellipsis">Name</p></th>
+                                        <th><p class="text-ellipsis">Controlled %</p></th>
+                                        <th><p class="text-ellipsis">Mechanical</p></th>
+                                        <th><p class="text-ellipsis">Performance</p></th>
+                                        <th><p class="text-ellipsis">Synchronization</p></th>
+                                    </tr>
+                                    </thead>
+                                    <tr>
+                                        <td><p class="text-ellipsis">CA</p></td>
+                                        <td colspan="2"><p class="text-ellipsis">Cynitha Waters</p></td>
+                                        <td><p class="text-ellipsis">100.00</p></td>
+                                        <td><p class="text-ellipsis">0.00</p></td>
+                                        <td><p class="text-ellipsis">50.00</p></td>
+                                        <td><p class="text-ellipsis">0.00</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p class="text-ellipsis">CA</p></td>
+                                        <td colspan="2"><p class="text-ellipsis">Cynitha Waters</p></td>
+                                        <td><p class="text-ellipsis">100.00</p></td>
+                                        <td><p class="text-ellipsis">0.00</p></td>
+                                        <td><p class="text-ellipsis">50.00</p></td>
+                                        <td><p class="text-ellipsis">0.00</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3"><p>Writer Controlled</p></td>
+                                        <td><p>100.00</p></td>
+                                        <td><p>0.00</p></td>
+                                        <td><p>50.00</p></td>
+                                        <td><p>0.00</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3"><p class="text-ellipsis">Publisher Controlled</p></td>
+                                        <td><p class="text-ellipsis">100.00</p></td>
+                                        <td><p class="text-ellipsis">100.00</p></td>
+                                        <td><p class="text-ellipsis">50.00</p></td>
+                                        <td><p class="text-ellipsis">100.00</p></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div id="analytics" class="tub-item">analytics</div>
+            </section>
+        </div>
+    </section>
+    <!--main content end-->
+</main>
+
+
+<script src="js/index.js"></script>
+</body>
+</html>
