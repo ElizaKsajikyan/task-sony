@@ -32,7 +32,7 @@ function toggleSidebar() {
     sidebarContainer.classList.toggle('active');
     subHeader.classList.toggle('toggle-left');
     tabContainer.classList.toggle('toggle-left');
-    if(toggleBul){
+    if (toggleBul) {
         tabButtonsLength()
     }
 }
@@ -43,12 +43,17 @@ function toggleClients() {
     clientsContainerOpen.classList.toggle('active');
     infoTable.classList.toggle('active');
     tabContainer.classList.toggle('m-left');
+
     if (toggleBul) {
         clientRsize.classList.remove('w-100');
         clientsContainerOpen.classList.remove('rsize');
         userInformation.classList.remove('d-none');
+        infoTable.classList.remove('w-100')
     } else {
-        tabButtonsLength();
+        setTimeout(() => {
+
+            tabButtonsLength();
+        }, 100)
     }
 }
 
@@ -59,6 +64,7 @@ function toggleResizer() {
     userInformation.classList.toggle('d-none');
     clientRsize.classList.toggle('w-100');
     clientsContainerOpen.classList.toggle('rsize');
+    infoTable.classList.toggle('w-100');
 
 }
 
@@ -69,23 +75,25 @@ resizeBtn.addEventListener('click', toggleResizer);
 
 function tabChange() {
     setTimeout(() => {
-        urlQuery = window.location.hash;
+            urlQuery = window.location.hash || '#dashboard';
 
-        for (let i = 0; i < tabHeaderBtns.length; i++) {
-            if (tabHeaderBtns[i].getAttribute('href') === urlQuery) {
-                tabHeaderBtns[i].classList.add(('active'))
-            } else {
-                tabHeaderBtns[i].classList.remove(('active'))
+            for (let i = 0; i < tabHeaderBtns.length; i++) {
+                if (tabHeaderBtns[i].getAttribute('href') === urlQuery) {
+                    tabHeaderBtns[i].classList.add(('active'))
+                } else {
+                    tabHeaderBtns[i].classList.remove(('active'))
+                }
             }
-        }
-        for (let k = 0; k < tubItem.length; k++) {
-            if (tubItem[k].getAttribute('id') === urlQuery.replace('#', '')) {
-                tubItem[k].classList.add(('active'))
-            } else {
-                tubItem[k].classList.remove(('active'))
+            for (let k = 0; k < tubItem.length; k++) {
+                if (tubItem[k].getAttribute('id') === urlQuery.replace('#', '')) {
+                    tubItem[k].classList.add(('active'))
+                } else {
+                    tubItem[k].classList.remove(('active'))
+                }
             }
-        }
-    }, 0)
+        },
+        0
+    )
 }
 tabChange();
 tabHeaderBtn.addEventListener('click', tabChange);
@@ -114,13 +122,16 @@ for (i = 0; i < acc.length; i++) {
 }
 
 function toggleAllAccordeon() {
-    let arr = [...acc];
+    let arr = [...acc
+        ]
+    ;
 
-    arr.filter(el => {
-        if (el.classList.contains('open')) {
+    arr.filter((el) => {
+        if (el.classList.contains('open')
+        ) {
             accordeonOpenToggle = true
         }
-    });
+    })
     if (accordeonOpenToggle) {
         for (i = 0; i < acc.length; i++) {
             acc[i].classList.remove('open');
